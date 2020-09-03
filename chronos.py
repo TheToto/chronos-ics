@@ -8,10 +8,12 @@ import requests
 import ics
 
 
-API = 'http://v2.webservices.chronos.epita.net/api/v2'
-RANGE = 3
+API = 'https://v2ssl.webservices.chronos.epita.net/api/v2'
+AUTH_TOKEN = 'r1KEMfOZsVfjSEzWTTUoD5Zy'
+RANGE = 5
 PRODID = '-//Laboratoire Assistant <acu@acu.epita.fr>//chronos.py//EN'
 
+headers = {'Auth-Token': AUTH_TOKEN}
 
 def join_names(i):
     return ', '.join([x.get('Name') for x in i])
@@ -19,7 +21,7 @@ def join_names(i):
 
 def chronos(promo, group):
     logging.warning('{} {}'.format(group, promo))
-    r = requests.get('{}/Planning/GetRangeWeek/{}/{}'.format(API, group, RANGE))
+    r = requests.get('{}/Planning/GetRangeWeek/{}/{}'.format(API, group, RANGE), headers=headers)
     if r.status_code != 200:
         logging.error('cannot get API informations for {}'.format(group))
         return

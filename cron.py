@@ -18,12 +18,12 @@ def get_year():
 
 STUDENT_PROM = get_year()
 ASSISTANT_PROM = STUDENT_PROM - 2
-OUTPUT = 'build'
+OUTPUT = '.'
 CALDIR = os.path.join(OUTPUT, 'calendars')
 
 GROUPS = ["GRA", "GRB", "APPINGI1", "APPINGI2", "APPINGX1", "APPINGX2",
           "APPINGX3"]
-MAJORS = ["CSI", "MTI", "GISTRE", "SRS", "SIGL", "SCIA", "TCOM", "GITM"]
+MAJORS = ["CSI", "MTI", "GISTRE", "SRS", "SIGL", "SCIA", "TCOM", "GITM", "IMAGE"]
 
 
 def get_calendar(promo, group):
