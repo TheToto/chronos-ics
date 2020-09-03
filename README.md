@@ -14,5 +14,6 @@ pip install -r requirements.txt
 ```
 ## Run
 
-- generate the calendars and the index file using `cron.py`;
-- `cp` generated files to a path served by your reverse proxy as static files.
+- get a chrnos token and set "CHRONOS_AUTH_TOKEN" env var
+- run server with `python server.py`
+- maybe adjust groups in cron.py

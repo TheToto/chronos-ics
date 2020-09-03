@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import argparse
+import os
 import re
 import logging
 
@@ -9,7 +10,7 @@ import ics
 
 
 API = 'https://v2ssl.webservices.chronos.epita.net/api/v2'
-AUTH_TOKEN = 'r1KEMfOZsVfjSEzWTTUoD5Zy'
+AUTH_TOKEN = os.environ['CHRONOS_AUTH_TOKEN']
 RANGE = 5
 PRODID = '-//Laboratoire Assistant <acu@acu.epita.fr>//chronos.py//EN'
 
